@@ -4,6 +4,7 @@ class PaymentController < ApplicationController
   end
 
   def process_payment
+    session[:params] = params
   end
 
   def confirm_payment
