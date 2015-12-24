@@ -8,11 +8,7 @@ class PaymentController < ApplicationController
   end
 
   def confirm_payment
-    if params[:status]
-      redirect_to params[:payment_return_url]
-    else
-      redirect_to params[:payment_return_url]
-    end
+    redirect_to "#{params[:payment_return_url]}?status=#{params[:status]}&order_no=#{params[:order_no]}"
   end
 
 end
