@@ -1,0 +1,6 @@
+<h1>You are making payment for order number: <%= session[:params][:order_no] %> & amount: <%= session[:params][:amount] %></h1>
+
+<p><%= link_to "Yes", confirm_payment_path(status: true), method: :post %></p>
+
+<p><%= link_to "Cancel", confirm_payment_path(status: false), method: :post %></p>
+

@@ -1,8 +1,0 @@
-<h1>You are making payment for order number: <%= @order_no %> & amount: <%= @amount %></h1>
-
-<%= button_to "Yes",
-     { :controller => :payment, :action=> :index, :page => @current_page},
-     { :remote => true }
- %>
-<br/>
-

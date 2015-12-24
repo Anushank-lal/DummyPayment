@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
+  post 'process_payment' => 'payment#process_payment'
 
-  post 'payment/index'
-
-  post 'process_payment' => 'home#index'
+  post 'confirm_payment' => 'payment#confirm_payment', as: :confirm_payment
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#index'
+  # root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
